@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Opsamling</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>menu 1</li>
+          <li>menu 2</li>
+          <li>menu 3</li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Tak for din tilmelding!</h1>
+      <div class="event-wrapper">
+        <section class="confirmation">
+          <p>Vi har modtaget dine oplysninger og vil kontakte dig, hvis der er behov for yderligere information.</p>
+          <p>Du kan nu se dit personlige event-pas nedenfor.</p>
+        </section>
+        <section class="event-pass">
+          <section class="data">
+            <h2>Dit personlige event-pas</h2>
+            <div class="personal-info-section">
+              <p>Navn: <span id="nickname"></span></p>
+              <p>Erhverv: <span id="occupation"></span></p>
+              <p>Slægt: <span id="lineage"></span></p>
+              <p>Familiens ordsprog: <span id="saying"></span></p>
+            </div>
+            <img id="occupation-image" src="img/default.png" alt="Erhverv" />
+          </section>
+          <section class="workshops">
+            <h3>Du er tilmeldt følgende workshops:</h3>
+            <ul id="workshops"></ul>
+          </section>
+        </section>
+      </div>
+      <button id="print-button">Udskriv event-pas</button>
+    </main>
+    <footer>
+      <p>(c) Me</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>menu 1</li>
+          <li>menu 2</li>
+          <li>menu 3</li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Eksempel</h1>
+      <section class="form-wrapper">
+        <h2>Formular</h2>
+        <form class="pass-form" action="./opsamling.html">
+          <fieldset class="form-group">
+            <legend>Personlig information</legend>
+            <label for="username">
+              Navn
+              <input type="text" name="username" id="username" />
+            </label>
+            <fieldset class="radio-group">
+              <legend>Erhverv</legend>
+              <label for="occupation1">
+                <input class="occupation-input" type="radio" name="occupation" id="occupation1" value="Håndværker" />
+                <span>Håndværker</span>
+              </label>
+              <label for="occupation2">
+                <input class="occupation-input" type="radio" name="occupation" id="occupation2" value="Håndhæver af loven" />
+                <span>Håndhæver af loven</span>
+              </label>
+              <label for="occupation3">
+                <input class="occupation-input" type="radio" name="occupation" id="occupation3" value="Samler" />
+                <span>Samler</span>
+              </label>
+              <label for="occupation4">
+                <input class="occupation-input" type="radio" name="occupation" id="occupation4" value="Fortæller" />
+                <span>Fortæller</span>
+              </label>
+            </fieldset>
+          </fieldset>
+          <fieldset class="form-group">
+            <legend>Familie</legend>
+            <label for="lineage"> Slægt </label>
+            <select name="lineage" id="lineage">
+              <option value="">-- vælg --</option>
+              <option value="Nim">Nim</option>
+              <option value="Ambel">Ambel</option>
+              <option value="Tusker">Tusker</option>
+              <option value="Whisker">Whisker</option>
+            </select>
+            <label for="saying">Familiens ordsprog</label>
+            <textarea name="saying" id="saying"></textarea>
+          </fieldset>
+          <fieldset class="form-group">
+            <legend>Deltagelse i workshop</legend>
+            <label for="teamaking">
+              <input type="checkbox" name="workshop" value="Traditionel te-brygning" id="teamaking" />
+              Traditionel te-brygning
+            </label>
+            <label for="cooking">
+              <input type="checkbox" name="workshop" value="Rod i madlavningen" id="cooking" />
+              Rod i madlavningen - Udnyt jordens skjulte ressourcer
+            </label>
+            <label for="crafting">
+              <input type="checkbox" name="workshop" value="Håndbyggerværksted" id="crafting" />
+              Håndbyggerværksted
+            </label>
+            <label for="storytelling">
+              <input type="checkbox" name="workshop" value="Fortællerglæde" id="storytelling" />
+              Fortællerglæde - Lær at fortælle historier, der fænger
+            </label>
+          </fieldset>
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>(c) Me</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

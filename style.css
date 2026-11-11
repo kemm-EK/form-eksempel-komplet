@@ -1,0 +1,327 @@
+@font-face {
+  font-family: "iso";
+  src: url("./fonts/Isometra-Regular.ttf");
+}
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "iso", sans-serif;
+}
+body {
+  min-height: 100svh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  row-gap: 1rem;
+  grid-template-columns: minmax(1rlh, 1fr) minmax(0, 75rem) minmax(1rlh, 1fr);
+  > * {
+    grid-column: 2;
+  }
+}
+header,
+footer {
+  background-color: rgb(53, 53, 53);
+
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: inherit;
+  padding: 1rem 0;
+  > * {
+    grid-column: 2;
+  }
+  li,
+  p {
+    color: aliceblue;
+  }
+}
+header ul {
+  display: flex;
+  justify-content: space-around;
+  li {
+    list-style: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0.2rem;
+  }
+}
+h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+h3 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+p,
+span,
+li,
+button,
+label,
+legend {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #444;
+}
+
+/* Form css */
+.form-wrapper {
+  display: grid;
+  gap: 1rlh;
+  max-width: 800px;
+  margin: 2rem auto;
+}
+.pass-form {
+  display: grid;
+  gap: 1rlh;
+  padding: 1rlh;
+  border-radius: 12px;
+  outline: 1px solid oklch(0.8 0.03 0);
+  background: #fefcfc;
+}
+.form-group {
+  display: grid;
+  gap: 0.45rlh;
+}
+legend,
+label:not(fieldset > *) {
+  font-weight: 550;
+}
+.form-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5ch;
+}
+/* INPUT TEXT */
+input,
+select,
+textarea,
+button {
+  font: inherit;
+}
+input[type="text"],
+/* select {
+  background: #fff;
+  border: none;
+  outline: 1px solid oklch(0.8 0.03 0);
+  color: inherit;
+  padding: 0.45rlh 0.6rlh;
+  border-radius: 4px;
+
+  &:focus-visible {
+    outline-color: #784fcf;
+    outline-width: 2px;
+    outline-offset: 2px;
+    box-shadow: none;
+  }
+} */
+
+fieldset {
+  padding: 0.75rlh;
+  border: 1px solid oklch(0.8 0.03 0);
+  border-radius: 8px;
+}
+fieldset fieldset {
+  padding: 0.5rlh;
+  border: 1px dashed oklch(0.8 0.03 0);
+  border-radius: 8px;
+  margin-top: 0.5rlh;
+}
+
+/* Radio Group: ERHVERV */
+.radio-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(1fr, 1fr));
+  gap: 0.5rlh;
+  span {
+    display: flex;
+    align-items: center;
+    gap: 0.5ch;
+  }
+}
+
+/* Select FAMILIE */
+/* Åben op for moderne styling af dropdown-menuen */
+select,
+::picker(select) {
+  appearance: base-select;
+}
+/* Styling af dropdown-menuen */
+select {
+  padding: 0.75rem;
+  border: 1px solid #aaa;
+  border-radius: 8px;
+  background: #eee;
+  color: inherit;
+}
+/* Vælg baggrundsfarven mm. for dropdown menuen */
+::picker(select) {
+  background: #333;
+  color: #eee;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem;
+  box-shadow: 0 5px 15px #0004;
+}
+/* Vælg det tegn der skal vises i dropdown menuen når den er lukket */
+select::picker-icon {
+  color: red;
+  transition: transform 0.3s;
+}
+/* Vælg det tegn der skal vises i dropdown menuen når den er åben */
+select:open::picker-icon {
+  transform: rotate(180deg);
+}
+/* Styling af de enkelte options i dropdown menuen */
+option {
+  padding: 0.75rem;
+  border-radius: 5px;
+}
+/* Vælg baggrundsfarven for den option i dropdown menuen som musen er over */
+option:hover {
+  background: #555;
+}
+/* Vælg baggrundsfarven for den valgte option i dropdown menuen */
+option:checked {
+  background: #784ece;
+  color: #fff;
+}
+/* Vælg selv hvilket tegn der skal vises i dropdown menuen */
+option::checkmark {
+  content: "\2691";
+}
+/* Styling af submit-knappen i formularen */
+.pass-form button {
+  justify-self: start;
+  padding: 0.45rlh 0.85rlh;
+  border: 1px solid #4b217c;
+  border-radius: 4px;
+  background: #4b217c;
+  color: #fff;
+}
+/* Styling af occupation-input (radio-knapper) */
+.occupation-input {
+  appearance: none;
+  block-size: 1.1rlh;
+  inline-size: 1.1rlh;
+  border-radius: 9999px;
+  background: #e2e2e7;
+  border: 1px solid #a9abed;
+
+  &:checked {
+    outline: 2px solid #a9abed;
+    background: #2d2da6;
+    outline-offset: 2px;
+  }
+}
+.color-input:focus-visible {
+  outline: 2px solid #a9abed;
+  outline-offset: 2px;
+  box-shadow: none;
+}
+/* Styling of textarea */
+textarea {
+  background: #fff;
+  border: none;
+  outline: 1px solid oklch(0.8 0.03 0);
+  color: inherit;
+  padding: 0.45rlh 0.6rlh;
+  border-radius: 4px;
+
+  &:focus-visible {
+    outline-color: #784fcf;
+    outline-width: 2px;
+    outline-offset: 2px;
+    box-shadow: none;
+  }
+}
+input[type="checkbox"] {
+  accent-color: darkred;
+  width: 1.2rem;
+  height: 1.2rem;
+  cursor: pointer;
+}
+
+/* event pass section */
+/* eventpass laves som et card, der står lidt skævt (i perspektiv) */
+.event-wrapper {
+  display: grid;
+  grid-template-columns: 3fr 7fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  margin: 2rem auto;
+}
+.event-pass {
+  display: grid;
+  gap: 2.5rem;
+  background-color: #f5f5f5;
+  padding: 2.5rem 1rem 4rem 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: perspective(800px) rotateX(8deg) rotateY(-15deg) rotateZ(2deg);
+  max-width: 400px;
+  aspect-ratio: 3/3;
+  section {
+    display: grid;
+  }
+  li {
+    list-style: none;
+    &:before {
+      content: "• ";
+      color: #784ece;
+    }
+    line-height: 2.5;
+  }
+}
+.data {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  .personal-info-section {
+    display: grid;
+    grid-template-rows: repeat(4, 1.2rlh);
+    gap: 0.5rem;
+  }
+  h2 {
+    grid-column: 1/-1;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    object-fit: contain;
+    justify-self: end;
+  }
+}
+
+/* Print */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  .event-pass,
+  .event-pass * {
+    visibility: visible;
+  }
+
+  .event-pass {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: none;
+
+    /* background-color: #f5f5f5; */
+    print-color-adjust: exact;
+    border: 1px solid #000;
+    border-radius: 10px;
+    width: fit-content;
+    max-width: 400px;
+    height: fit-content;
+    padding: 1rem;
+
+    transform: none;
+    box-shadow: none;
+  }
+}
