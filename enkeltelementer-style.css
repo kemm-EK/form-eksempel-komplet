@@ -1,0 +1,186 @@
+@font-face {
+  font-family: "rubik";
+  src: url("fonts/Rubik-VariableFont_wght.ttf");
+}
+body {
+  font-family: "rubik", sans-serif;
+}
+label {
+  display: block;
+}
+
+form {
+  display: grid;
+  gap: 1.2rem;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 25ch;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 2px 1px 3px rgba(0, 0, 0, 0.4);
+  background-color: #f9f9f9;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+input[type="radio"] {
+  accent-color: darkred;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* input[type="radio"] {
+  appearance: none;
+  width: 1.2rem;
+  height: 2.2rem;
+  border: 2px dashed darkred;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+}
+input[type="radio"]:checked {
+  background: rgb(229, 30, 30);
+  border: 3px solid rgb(95, 27, 27);
+  box-shadow: 0 0 8px rgb(11, 221, 4);
+} */
+
+textarea {
+  width: 25ch;
+  height: 10ch;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 2px 1px 3px rgba(0, 0, 0, 0.4);
+  background-color: #f9f9f9;
+}
+
+/* Styling af SELECT */
+/* Aktiver styling */
+select,
+::picker(select) {
+  appearance: base-select;
+  width: 25ch;
+}
+
+/* Selve select-feltet */
+select {
+  background: rgb(253, 204, 136);
+  border: 1px solid gray;
+}
+
+/* Dropdown-container */
+::picker(select) {
+  background: #fa9a9a;
+  border-radius: 8px;
+}
+
+/* De enkelte valgmuligheder */
+option {
+  padding: 0.5rem;
+}
+
+/* Hover på en option */
+option:hover {
+  background: lightblue;
+}
+
+/* Den valgte option */
+option:checked {
+  background: darkblue;
+  color: white;
+}
+
+/* Select-feltet, når dropdown er åben */
+select:open {
+  border-color: blue;
+}
+
+/* Dropdown-pilen */
+select::picker-icon {
+  color: red;
+}
+
+/* Flueben ved den valgte option */
+option::checkmark {
+  content: "\2276";
+  color: rgb(255, 251, 7);
+}
+
+/* Styling checkboxes */
+/* Selve checkboxen */
+input[type="checkbox"] {
+  appearance: none;
+  width: 1.3rem;
+  height: 1.3rem;
+  border: 2px solid gray;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+}
+/* Hover */
+input[type="checkbox"]:hover {
+  border-color: blue;
+  background: #eee;
+}
+/* Når checkboxen er valgt */
+input[type="checkbox"]:checked {
+  background: darkblue;
+  border-color: rgb(194, 194, 232);
+}
+/* Aligner checkboxene med teksten */
+fieldset.skillset label {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+/* Flueben */
+input[type="checkbox"]:checked::before {
+  content: "✓";
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Styling af submit-knappen */
+button[type="submit"] {
+  font: inherit;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.03em;
+
+  color: white;
+  background: #356b50;
+  border: 2px solid #244c38;
+  border-radius: 8px;
+  padding: 0.8rem 1.8rem;
+
+  cursor: pointer;
+  box-shadow: 0 4px 0 #244c38;
+  transition:
+    background 0.2s,
+    box-shadow 0.2s,
+    transform 0.2s;
+  width: 12ch;
+}
+
+/* Hover */
+button[type="submit"]:hover {
+  background: #488b68;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 #244c38;
+}
+
+/* Når knappen trykkes */
+button[type="submit"]:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #244c38;
+}

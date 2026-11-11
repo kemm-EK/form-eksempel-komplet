@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enkelte formelementer</title>
+    <link rel="stylesheet" href="enkeltelementer-style.css" />
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" />
+      </fieldset>
+
+      <fieldset>
+        <legend>Favorites</legend>
+        <label for="color">
+          <input type="radio" id="color" name="valg" />
+          Nymfeparakit
+        </label>
+        <label for="date">
+          <input type="radio" id="date" name="valg" />
+          Papegøje
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>provide feedback</legend>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message"> </textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>Choose your drink</legend>
+        <label for="choice">
+          <select id="choice" name="choice1">
+            <option value="water">Water</option>
+            <option value="juice">Juice</option>
+            <option value="soda">Soda</option>
+          </select>
+        </label>
+      </fieldset>
+
+      <fieldset class="skillset">
+        <legend>Skills</legend>
+        <label for="html">
+          <input type="checkbox" id="html" name="skills" value="html" />
+          HTML
+        </label>
+        <label for="css">
+          <input type="checkbox" id="css" name="skills" value="css" />
+          CSS
+        </label>
+        <label for="javascript">
+          <input type="checkbox" id="javascript" name="skills" value="javascript" />
+          JavaScript
+        </label>
+      </fieldset>
+      <div>
+        <button type="submit">SEND</button>
+      </div>
+    </form>
+  </body>
+</html>
